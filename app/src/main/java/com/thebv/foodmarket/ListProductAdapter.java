@@ -15,13 +15,11 @@ import java.util.Map;
  */
 
 public class ListProductAdapter extends FragmentStatePagerAdapter {
-    public int mNumOfTabs;
     public ListProductFragment.OnClickProduct onClickProduct;
     public Map<Integer, ListProductFragment> mapItem = new HashMap<>();
 
-    public ListProductAdapter(FragmentManager fm, int NumOfTabs, ListProductFragment.OnClickProduct onClickProduct) {
+    public ListProductAdapter(FragmentManager fm, ListProductFragment.OnClickProduct onClickProduct) {
         super(fm);
-        this.mNumOfTabs = NumOfTabs;
         this.onClickProduct = onClickProduct;
     }
 
@@ -49,6 +47,9 @@ public class ListProductAdapter extends FragmentStatePagerAdapter {
                 case 2:
                     fm.setNameOfFragment("VEGETABLE");
                     break;
+                case 3:
+                    fm.setNameOfFragment("NONE");
+                    break;
             }
             fm.setPosition(position);
             fm.setOnClickProduct(onClickProduct);
@@ -60,6 +61,6 @@ public class ListProductAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return mNumOfTabs;
+        return 4;
     }
 }

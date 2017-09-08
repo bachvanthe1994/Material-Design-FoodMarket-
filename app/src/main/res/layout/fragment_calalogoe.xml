@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    android:orientation="vertical">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:card_view="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/llToolbar"
@@ -23,7 +23,7 @@
             android:background="?selectableItemBackgroundBorderless"
             android:padding="@dimen/_6sdp"
             android:src="@drawable/ic_back_circle_white"
-            android:transitionName="ivNavigationIcon" />
+            android:transitionName="ivNavigationIcon"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             android:text="Catalogoe #1"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_18sdp"
-            android:transitionName="tvTitle" />
+            android:transitionName="tvTitle"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:padding="@dimen/_12sdp"
                 android:src="@drawable/ic_search"
-                android:transitionName="ivSearch" />
+                android:transitionName="ivSearch"/>
 
             <RelativeLayout
                 android:layout_width="@dimen/_40sdp"
@@ -59,7 +59,7 @@
                     android:background="?selectableItemBackgroundBorderless"
                     android:padding="@dimen/_11sdp"
                     android:src="@drawable/ic_cart_white"
-                    android:transitionName="ivCart" />
+                    android:transitionName="ivCart"/>
 
                 <TextView
                     android:id="@+id/tvCountProductAdd"
@@ -74,7 +74,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -118,10 +118,12 @@
 
                         <ImageView
                             android:id="@+id/ivPreviousPager"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
-                            android:padding="@dimen/_19sdp"
-                            android:src="@drawable/ic_previous" />
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="@dimen/_9sdp"
+                            android:src="@drawable/ic_previous"/>
 
                     </LinearLayout>
 
@@ -138,7 +140,7 @@
                             android:text="MEAT"
                             android:textColor="@color/gray"
                             android:textSize="@dimen/_14sdp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -150,11 +152,13 @@
 
                         <ImageView
                             android:id="@+id/ivNextPager"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
-                            android:padding="@dimen/_19sdp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="@dimen/_9sdp"
                             android:rotation="180"
-                            android:src="@drawable/ic_previous" />
+                            android:src="@drawable/ic_previous"/>
                     </LinearLayout>
 
                 </LinearLayout>

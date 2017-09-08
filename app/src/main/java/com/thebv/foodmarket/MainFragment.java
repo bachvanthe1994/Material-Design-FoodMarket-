@@ -19,28 +19,17 @@ import java.util.Map;
 public class MainFragment extends Fragment {
 
     private View view;
-    private static MainFragment instance;
 
     public ImageView ivNavigationIcon;
     public ImageView ivCart;
     public TextView tvTitle;
     public ImageView ivSearch;
-    private static ViewPager viewPager;
+    private ViewPager viewPager;
     private ShopAdapter adapter;
 
-    public static ViewPager getViewPager() {
-        return viewPager;
-    }
-
-    public static MainFragment getInstance() {
-        return instance;
-    }
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_main, container, false);
-        instance = this;
         init();
 
         Log.d("the::", "MainFragment onCreateView");
@@ -64,6 +53,13 @@ public class MainFragment extends Fragment {
         ivNavigationIcon.setTransitionName("ivNavigationIcon");
         ivCart.setTransitionName("ivCart");
         tvTitle.setTransitionName("tvTitle");
+
+        view.findViewById(R.id.tvShowOnlyFavorites).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     private void setupViewPaper() {

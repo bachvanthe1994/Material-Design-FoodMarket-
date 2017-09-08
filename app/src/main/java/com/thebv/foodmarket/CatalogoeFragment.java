@@ -66,7 +66,7 @@ public class CatalogoeFragment extends Fragment implements View.OnClickListener 
 
     private void setupViewPaper() {
         viewPager = (ViewPager) view.findViewById(R.id.pager);
-        adapter = new ListProductAdapter(getChildFragmentManager(), 3, new ListProductFragment.OnClickProduct() {
+        adapter = new ListProductAdapter(getChildFragmentManager(), new ListProductFragment.OnClickProduct() {
             @Override
             public void onAdd() {
                 countProductAdd++;
@@ -148,14 +148,14 @@ public class CatalogoeFragment extends Fragment implements View.OnClickListener 
 
                         if (mStartDragX < oldX && viewPager.getCurrentItem() < (adapter.getCount() - 1)) {
                             float move = oldX - mStartDragX;
-                            float width = oldX < viewPager.getWidth() - viewPager.getWidth() / 3 ? viewPager.getWidth() : oldX;
+                            float width = oldX < viewPager.getWidth() - viewPager.getWidth() / adapter.getCount() ? viewPager.getWidth() : oldX;
                             Log.d("the::", "percent< = " + (move / width));
 
                             percent = (move / width);
                             fadeViewPager(percent);
                         } else if (mStartDragX > oldX && viewPager.getCurrentItem() > 0) {
                             float move = mStartDragX - oldX;
-                            float width = (viewPager.getWidth() - oldX) < viewPager.getWidth() - viewPager.getWidth() / 3 ? viewPager.getWidth() : (viewPager.getWidth() - oldX);
+                            float width = (viewPager.getWidth() - oldX) < viewPager.getWidth() - viewPager.getWidth() / adapter.getCount() ? viewPager.getWidth() : (viewPager.getWidth() - oldX);
                             Log.d("the::", "percent> = " + (move / width));
 
                             percent = (move / width);
